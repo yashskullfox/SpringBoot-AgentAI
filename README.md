@@ -1,7 +1,7 @@
-# Setting Up Your Local Agentic AI Environment with Ollama and Spring Boot
+# Setting Up Local Agentic AI Environment with Ollama and Spring Boot
 
-To build a strong AI app at home, you need a reliable server that can run AI models. Instead of using cloud services,
-you can run everything on your own computer. This guide shows how to set up a local AI environment with **Ollama**,
+To build a strong AI app at home, need a reliable server that can run AI models. Instead of using cloud services,
+you can run everything on own computer. This guide shows how to set up a local AI environment with **Ollama**,
 which turns your machine into a simple, self-contained AI service you can use from your Spring Boot app.
 
 ---
@@ -35,7 +35,7 @@ Use the appropriate command for your operating system:
 To confirm that Ollama was installed correctly, open a new terminal and run:
 
 ```sh
-    ollama --version
+ollama --version
 ```
 
 If you see a version number, you're ready to move on.
@@ -51,7 +51,7 @@ Start the server by running the following command. Leave this process running in
 running your app.
 
 ```sh
-    ollama serve
+ollama serve
 ```
 
 ## 3. Download and Use a Model
@@ -63,7 +63,7 @@ The **DeepSeek Coder** models are powerful, open-source models that are particul
 Use the following command to download a model (the first download may take several minutes):
 
 ```sh
-  ollama pull deepseek-r1:8b
+ollama pull deepseek-r1:8b
 ```
 Choose the Right Model for Your System
 
