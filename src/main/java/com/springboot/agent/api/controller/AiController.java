@@ -14,8 +14,13 @@ public class AiController {
         this.aiAgentService = aiAgentService;
     }
 
-    @PostMapping("/chat")
+    @PostMapping("/agent")
     public String generateResponse(@RequestBody String prompt) {
         return aiAgentService.getAiResponse(prompt);
+    }
+
+    @GetMapping(value = "/chat-stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    public Flux<String> generateResponseStream(@RequestParam String prompt) {
+        return aiChatService.getAiResponseStream(prompt);
     }
 }

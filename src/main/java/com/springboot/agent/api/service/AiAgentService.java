@@ -19,4 +19,11 @@ public class AiAgentService {
                 .call()
                 .content();
     }
+
+    public Flux<String> getAiResponseStream(String prompt) {
+        return chatClient.prompt()
+                .user(prompt)
+                .stream() // Change.call() to.stream()
+                .content();
+    }
 }
