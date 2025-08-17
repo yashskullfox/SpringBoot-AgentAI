@@ -102,3 +102,21 @@ You can test the API with a curl request to ensure it's working:
 If the command returns a JSON response with the model’s answer, your local AI backend is working and ready for Spring Boot.
 
 Once the curl test works, you’re ready to connect given Spring Boot app to your new local AI service, which exposed a small POST endpoint to take request and provide response based on it.
+
+### Running and Interacting with Your API
+The Spring Boot application can be launched directly from an IDE or via the Maven wrapper from the command line.
+
+Navigate to the project's root directory in a terminal and execute:
+
+```sh
+mvn spring-boot:run
+```
+Upon successful startup, the console will indicate that the application is running on port 8080.   
+
+To test the API endpoint, a curl command can be used to send a POST request.
+
+```sh
+curl -X POST http://localhost:8080/api/v1/ai/chat \
+-H "Content-Type: text/plain" \
+-d "Explain the concept of dependency injection in Spring Boot in simple terms."
+```
